@@ -11,12 +11,12 @@ class Scraper:
         print(self.result.status_code)
         
         self.soup = BeautifulSoup(self.result.content)
-        self.alltext=self.soup.findAll('div',attrs={'class','_30jeq3'})
+        self.alltext=self.soup.findAll('div',attrs={'class','_1AtVbE col-12-12'})
         
         count=0
-        for item in self.alltext:
+        for text in self.alltext:
             count=count+1
-            print(item.text)
+            print(text.alltext)
             print('*'*30)
         print('total items in page={}'.format(count))
     def refine_data(self):
